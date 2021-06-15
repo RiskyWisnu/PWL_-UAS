@@ -40,11 +40,21 @@ class ProductController extends Controller
             $request->validate([
                 'Id' => 'required',
                 'Nama' => 'required',
+                'image' => 'required',
                 'Jumlah' => 'required',
+                
     ]);
-
+    $Product = new Product;
+    $Product-> Id = $request->get('Id');
+    $Product-> Nama = $request->get('Nama');
+    if ($request->file('image')) {
+        $image_name = $request->file('image')->store('images', 'public');
+    }
+    $Product->photo = $image_name;
+    $Product-> Jumlah = $request->get('Jumlah');
+    $Product->save();
     //fungsi eloquent untuk menambah data
-    Product::create($request->all());
+    
     //jika data berhasil ditambahkan, akan kembali ke halaman utama
     return redirect()->route('produce.index')
         ->with('success', 'Product Berhasil Ditambahkan');
@@ -72,7 +82,18 @@ class ProductController extends Controller
             'Jumlah' => 'required',
     ]);
    //fungsi eloquent untuk mengupdate data inputan kita
-         Product::find($Id)->update($request->all());
+        $Product = new Product;
+        $Product-> Id = $request->get('Id');
+        $Product-> Nama = $request->get('Nama');
+        if($Product->photo && file_exists('app/public/' . $Product->photo)) {
+            \Storage::delete('public/' . $Product->photo);
+        }
+        $image_name = $request->file('image')->store('images', 'public');
+        $Product->photo = $image_name;
+        $Product-> Jumlah = $request->get('Jumlah');
+        $Product->save();
+
+    
    //jika data berhasil diupdate, akan kembali ke halaman utama
             return redirect()->route('produce.index')
                 ->with('success', 'Product Berhasil Diupdate');

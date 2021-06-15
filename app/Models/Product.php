@@ -22,6 +22,7 @@ class Product extends Model //Definisi Model
     protected $fillable = [
         'Id',
         'Nama',
+        'photo',
         'Jumlah',
     ];
 

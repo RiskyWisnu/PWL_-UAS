@@ -49,6 +49,7 @@
     <tr>
         <th>Id</th>
         <th>Nama</th>
+        <th>Photo</th>
         <th>Jumlah</th>
 
         <th width="280px">Action</th>
@@ -57,6 +58,9 @@
     <tr>
     <td>{{ $Product->Id}}</td>
         <td>{{ $Product->Nama}}</td>
+        <td>
+        <img width="100px" src="{{asset('storage/'.$Product->photo)}}" alt="image" style="object-fit: cover">
+</td>
         <td>{{ $Product->Jumlah }}</td>
        
         <td>
