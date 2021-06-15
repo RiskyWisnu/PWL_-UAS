@@ -16,6 +16,11 @@
 | Nama Lengkap | **RISKY WISNU OKTOVIANTO** |
 | Kelas | TI-2B |
 
+|  |  |
+|--|--|
+| NIM | **1941720143** |
+| Nama Lengkap | **RAFI RACHMAWAN** |
+| Kelas | TI-2B |
 
 
 
@@ -36,3 +41,4 @@ Jika saya melakukan plagiasi, kecurangan, atau melanggar hak kekayaan intelektua
 Ttd, 
 
 ***(Risky wisnu oktovianto)***
+***(Rafi rachmawan)***
