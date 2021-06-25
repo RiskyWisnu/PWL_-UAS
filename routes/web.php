@@ -51,3 +51,5 @@ Route::get('/index', [IndexController::class, 'index']);
 
 //Halaman Services
 Route::get('/services', [ServicesController::class, 'services']);
+
+Route::get('/Produce/cetak_khs', [ProductController::class, 'cetak_khs']);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\models\Product;
+use PDF;
 
 class ProductController extends Controller
 {
@@ -105,6 +106,11 @@ class ProductController extends Controller
          Product::find($Id)->delete();
         return redirect()->route('produce.index')
         -> with('success', 'Product Berhasil Dihapus');
+    }
+    public function cetak_khs(){ 
+        $Product = Product::all(); 
+        $pdf = PDF::loadview('produce.cetak_khs',['produce'=>$Product]); 
+        return $pdf->stream(); 
     }
  };  
     
