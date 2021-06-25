@@ -49,13 +49,13 @@
 ### Kode-kode Program
 
 ## Kode Program Model
-[Kode Program Model](../PWL_-UAS/app/Models)
+[Kode Program Model](PWL_-UAS/app/Models)
 
 ## Kode Program View
-[Kode Program View](../PWL_-UAS/resources/views)
+[Kode Program View](PWL_-UAS/resources/views)
 
 ## Kode Program Controller
-[Kode Program Controller](../PWL_-UAS/app/Http/Controllers)
+[Kode Program Controller](PWL_-UAS/app/Http/Controllers)
 
 ## Kode Program Router
-[Kode Program Router](../PWL_-UAS/routes)
+[Kode Program Router](PWL_-UAS/routes)
